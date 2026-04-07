@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: live-todo-web-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: live-todo-web
+  template:
+    metadata:
+      labels:
+        app: live-todo-web
+    spec:
+      containers:
+      - name: live-todo-web-container
+        image: azmattullah/live-todo:12
+        ports:
+        - containerPort: 8000
