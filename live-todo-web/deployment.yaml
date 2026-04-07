@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: live-todo-web-container
-        image: azmattullah/live-todo:12
+        image: azmattullah/live-todo:13
         ports:
         - containerPort: 8000
