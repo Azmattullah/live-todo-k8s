@@ -2,6 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: live-todo-nginx-conf
+  namespace: {{ .Values.namespace | default .Release.Namespace }}
 data:
   default.conf: |
     server {

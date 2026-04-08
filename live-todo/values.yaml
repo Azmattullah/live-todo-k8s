@@ -1,3 +1,5 @@
+namespace: live-todo
+
 replicaCount: 2
 
 image:
