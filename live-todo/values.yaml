@@ -2,7 +2,7 @@ replicaCount: 2
 
 image:
   repository: azmattullah/live-todo
-  tag: "14"
+  tag: "15"
 
 service:
   type: ClusterIP
