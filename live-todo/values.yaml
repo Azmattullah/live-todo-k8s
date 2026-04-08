@@ -1,4 +1,4 @@
-namespace: live-todo
+namespace: live-todo-web
 
 replicaCount: 2
 
