@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: live-todo-web-svc
+  labels:
+    app: live-todo-web
+spec:
+  type: {{ .Values.service.type }}
+  selector:
+    app: live-todo-web
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: 80

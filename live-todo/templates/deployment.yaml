@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: live-todo-web-deployment
+  labels:
+    app: live-todo-web
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: live-todo-web
+  template:
+    metadata:
+      labels:
+        app: live-todo-web
+    spec:
+      containers:
+      
+      - name: php-fpm
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        ports:
+        - containerPort: 9000
+
+      - name: nginx
+        image: nginx:latest
+        ports:
+        - containerPort: 80
