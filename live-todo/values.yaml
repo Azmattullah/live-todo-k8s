@@ -16,6 +16,7 @@ ingress:
   host: todo.avaditech.com
   annotations:
     cert-manager.io/cluster-issuer: "letsencrypt-prod" 
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
   tls:
     enabled: true
     secretName: live-todo-tls-secret
