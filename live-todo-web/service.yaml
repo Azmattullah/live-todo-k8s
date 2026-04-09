@@ -5,10 +5,7 @@ metadata:
   labels:
     app: live-todo-web
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   ports:
-  - port: 8000
-    targetPort: 8000
-    protocol: TCP
-  selector:
-    app: live-todo-web
+    - port: 80
+      targetPort: 80

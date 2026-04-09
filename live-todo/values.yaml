@@ -14,3 +14,8 @@ ingress:
   enabled: true
   className: nginx
   host: todo.avaditech.com
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-prod" 
+  tls:
+    enabled: true
+    secretName: live-todo-tls-secret

@@ -1,0 +1,14 @@
+replicaCount: 2
+
+image:
+  repository: azmattullah/live-todo
+  tag: "14"
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: true
+  className: nginx
+  host: todo.avaditech.com

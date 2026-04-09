@@ -3,17 +3,17 @@ kind: Deployment
 metadata:
   name: live-todo-web-deployment
 spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: live-todo-web
+  replicas: {{ .Values.replicaCount }}
   template:
-    metadata:
-      labels:
-        app: live-todo-web
     spec:
       containers:
-      - name: live-todo-web-container
-        image: azmattullah/live-todo:13
+      
+      - name: php-fpm
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         ports:
-        - containerPort: 8000
+        - containerPort: 9000
+
+      - name: nginx
+        image: nginx:latest
+        ports:
+        - containerPort: 80
