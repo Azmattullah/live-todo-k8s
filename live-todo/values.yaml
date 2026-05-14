@@ -1,9 +1,9 @@
-namespace: boom-ott-web
+namespace: live-todo-web
 
 replicaCount: 2
 
 image:
-  repository: azmattullah/boom-ott
+  repository: azmattullah/live-todo
   tag: "17"
 
 service:
@@ -19,4 +19,4 @@ ingress:
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
   tls:
     enabled: true
-    secretName: boom-ott-tls-secret
+    secretName: live-todo-tls-secret

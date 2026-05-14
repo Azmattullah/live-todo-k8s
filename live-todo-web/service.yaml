@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: boom-ott-web-svc
+  name: live-todo-web-svc
   labels:
-    app: boom-ott-web
+    app: live-todo-web
 spec:
   type: ClusterIP
   ports:

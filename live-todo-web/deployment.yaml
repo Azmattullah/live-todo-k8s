@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: boom-ott-web-deployment
+  name: live-todo-web-deployment
 spec:
   replicas: {{ .Values.replicaCount }}
   template:

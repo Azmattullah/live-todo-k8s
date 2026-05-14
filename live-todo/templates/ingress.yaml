@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: boom-ott-ingress
+  name: live-todo-ingress
   namespace: {{ .Values.namespace | default .Release.Namespace }}
   {{- if .Values.ingress.annotations }}
   annotations:
@@ -23,6 +23,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: boom-ott-web-svc
+            name: live-todo-web-svc
             port:
               number: {{ .Values.service.port }}

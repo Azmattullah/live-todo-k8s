@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: boom-ott-web-deployment
+  name: live-todo-web-deployment
   namespace: {{ .Values.namespace | default .Release.Namespace }}
   labels:
-    app: boom-ott-web
+    app: live-todo-web
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: boom-ott-web
+      app: live-todo-web
   template:
     metadata:
       labels:
-        app: boom-ott-web
+        app: live-todo-web
     spec:
       initContainers:
       - name: init-public
@@ -42,6 +42,6 @@ spec:
       volumes:
       - name: nginx-conf
         configMap:
-          name: boom-ott-nginx-conf
+          name: live-todo-nginx-conf
       - name: shared-public
         emptyDir: {}
