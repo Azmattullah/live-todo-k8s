@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: live-todo-nginx-conf
+  name: boom-ott-nginx-conf
   namespace: {{ .Values.namespace | default .Release.Namespace }}
 data:
   default.conf: |

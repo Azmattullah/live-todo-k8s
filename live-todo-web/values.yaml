@@ -1,7 +1,7 @@
 replicaCount: 2
 
 image:
-  repository: azmattullah/live-todo
+  repository: azmattullah/boom-ott
   tag: "14"
 
 service:
